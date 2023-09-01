@@ -5,17 +5,19 @@
 // Execute `rustlings hint strings2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 fn main() {
     let word = String::from("green"); // Try not changing this line :)
-    if is_a_color_word(word) {
+    if is_a_color_word(&word) {
         println!("That is a color word I know!");
     } else {
         println!("That is not a color word I know.");
     }
+    println!("{}", word);
 }
 
 fn is_a_color_word(attempt: &str) -> bool {
+    let new_attempt = String::from("ggg");
+    let attempt = &new_attempt;
+    // attempt = String::from("ggg");
     attempt == "green" || attempt == "blue" || attempt == "red"
 }
